@@ -1,5 +1,8 @@
 ## HEAD
 
+### Fork
+  * Forked jekyll-seo-tag, the wonderful plugin to add Soopr related functionalities - set `publish_token` under `soopr` key in `_config_file`
+
 ### Minor Enhancements
 
   * Allow to set type for author (#427)

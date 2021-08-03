@@ -3,12 +3,12 @@
 require_relative "lib/jekyll-seo-tag/version"
 
 Gem::Specification.new do |spec|
-  spec.name          = "jekyll-seo-tag"
+  spec.name          = "jekyll-soopr-seo-tag"
   spec.version       = Jekyll::SeoTag::VERSION
   spec.authors       = ["Ben Balter"]
   spec.email         = ["ben.balter@github.com"]
   spec.summary       = "A Jekyll plugin to add metadata tags for search engines and social networks to better index and display your site's content."
-  spec.homepage      = "https://github.com/jekyll/jekyll-seo-tag"
+  spec.homepage      = "https://github.com/abhinavs/jekyll-soopr-seo-tag"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org by setting 'allowed_push_host', or

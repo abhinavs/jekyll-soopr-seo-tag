@@ -1,8 +1,9 @@
-## About Jekyll SEO Tag
+## About Jekyll Soopr SEO Tag
 
-A Jekyll plugin to add metadata tags for search engines and social networks to better index and display your site's content.
-
-[![Gem Version](https://badge.fury.io/rb/jekyll-seo-tag.svg)](https://badge.fury.io/rb/jekyll-seo-tag) [![Build Status](https://travis-ci.org/jekyll/jekyll-seo-tag.svg)](https://travis-ci.org/jekyll/jekyll-seo-tag)
+Jekyll Soopr SEO Tag plugin is a fork of Jekyll SEO Tag, the wonderful plugin that adds metadata tags for search engines and social networks to better index and display your site's content.
+In addition to that, Soopr SEO Tag plugin uses Soopr and does following two things
+1. Auto-generation of share images using Soopr. This functionality uses title and description of page, and creates a beautiful image that is automatically added in the blog post.
+2. Add Soopr JS SDK to the site. Using Soopr JS SDK, you can add share and like buttons, URL shortener and analytics.
 
 ## What it does
 

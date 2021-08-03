@@ -175,6 +175,11 @@ module Jekyll
         end
       end
 
+      def soopr
+        @soopr ||= SooprDrop.new(:page => page, :site => site)
+        @soopr if @soopr.publish_token
+      end
+
       private
 
       def filters

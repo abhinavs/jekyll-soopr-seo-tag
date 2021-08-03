@@ -29,7 +29,7 @@
   <meta property="og:site_name" content="{{ seo_tag.site_title }}" />
 {% endif %}
 
-{% if seo_tag.image %}
+{% if seo_tag.image && seo_tag.image.path %}
   <meta property="og:image" content="{{ seo_tag.image.path }}" />
   {% if seo_tag.image.height %}
     <meta property="og:image:height" content="{{ seo_tag.image.height }}" />
@@ -37,6 +37,8 @@
   {% if seo_tag.image.width %}
     <meta property="og:image:width" content="{{ seo_tag.image.width }}" />
   {% endif %}
+{% elsif seo_tag.soopr %}
+  <meta property="og:image" content="https://soopr.xyz/images/card?url={{ seo_tag.canonical_url }}" />
 {% endif %}
 
 {% if page.date %}
@@ -55,6 +57,9 @@
 {% if seo_tag.image %}
   <meta name="twitter:card" content="{{ page.twitter.card | default: site.twitter.card | default: "summary_large_image" }}" />
   <meta property="twitter:image" content="{{ seo_tag.image.path }}" />
+{% elsif seo_tag.soopr %}
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta property="og:image" content="https://soopr.xyz/images/card?url={{ seo_tag.canonical_url }}" />
 {% else %}
   <meta name="twitter:card" content="summary" />
 {% endif %}
@@ -112,5 +117,9 @@
 <script type="application/ld+json">
   {{ seo_tag.json_ld | jsonify }}
 </script>
+
+{% if seo_tag.soopr %}
+  <script async defer data-soopr-token="{{seo_tag.soopr.publish_token}}" src="https://sdk.soopr.co/soopr.js"  ></script>
+{% endif %}
 
 <!-- End Jekyll SEO tag -->
